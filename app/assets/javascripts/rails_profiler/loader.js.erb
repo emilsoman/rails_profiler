@@ -1,0 +1,37 @@
+function loadWidget() {
+  var iframe = document.createElement('iframe');
+  iframe.src = '/rails_profiler/widget';
+  iframe.frameBorder= 0;
+  iframe.className = 'rails-profiler-frame';
+  iframe.width='100%';
+  iframe.height='50px';
+  iframe.style="width=100%"
+  document.getElementsByTagName('body')[0].appendChild(iframe);
+}
+
+function setPageChangeCookie() {
+  var value = 0;
+  if(getCookie('rails-profiler-page-id')) {
+    value = parseInt(getCookie('rails-profiler-page-id'));
+  }
+  document.cookie="rails-profiler-page-id=" + (value+1) ;
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+  }
+  return "";
+}
+
+if(window.attachEvent) {
+  window.attachEvent('onload', loadWidget);
+  window.attachEvent('onload', setPageChangeCookie);
+} else {
+  window.addEventListener('load', loadWidget, false);
+  window.addEventListener('unload', setPageChangeCookie, false);
+}

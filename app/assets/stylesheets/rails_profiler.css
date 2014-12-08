@@ -1,0 +1,39 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree ./rails_profiler
+ *= require_self
+ */
+
+.rails-profiler-container {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1px;
+  font-family: monospace;
+  height: 40px;
+}
+
+.rails-profiler-container > ul > li {
+  list-style: none;
+  width: 320px;
+}
+
+.rails-profiler-measure {
+  width: 160px;
+  position: relative;
+}
+
+.rails-profiler-total-memgrowth {
+  width: 160px;
+  position: relative;
+  left: 160px;
+  top: -14px;
+}

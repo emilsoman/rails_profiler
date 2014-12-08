@@ -1,0 +1,12 @@
+<div id="rails-profiler-container" class="rails-profiler-container">
+  <ul>
+    <li >
+      <div class="rails-profiler-measure">Toal memory growth :</div>
+      <div class="rails-profiler-total-memgrowth"> <%= RailsProfiler::Profiler.result[:total_memory_growth] %> </div>
+    </li>
+  </ul>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  startUpdating();
+</script>
