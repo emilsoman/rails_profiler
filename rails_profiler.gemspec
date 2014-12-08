@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsProfiler::VERSION
   s.authors     = ["Emil Soman"]
   s.email       = ["emil.soman@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "Shows vital statistics of Rails requests"
-  s.description = "TODO: Description of RailsProfiler."
+  s.homepage    = "https://github.com/emilsoman/rails_profiler"
+  s.summary     = "Rails engine that reveals high level profiling information of your Rails pages"
+  s.description = "Rails engine that reveals high level profiling information of your Rails pages"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
